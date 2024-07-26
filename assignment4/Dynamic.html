@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic CSS</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #dynamicDiv {
+            width: 500px;
+            height: 500px;
+            background-color: black; 
+            transition: background-color 0.1s;
+            margin-bottom: 5px; 
+        }
+
+        #changeColor {
+            position: absolute;
+            bottom: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dynamicDiv"></div>
+    <button id="changeColor">Change Color</button>
+
+    <script>
+        const colors = ['black', 'purple']; 
+        let currentColorIndex = 0;
+
+        document.getElementById('changeColor').addEventListener('click', () => {
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+            const div = document.getElementById('dynamicDiv');
+            div.style.backgroundColor = colors[currentColorIndex];
+        });
+    </script>
+</body>
+</html>
