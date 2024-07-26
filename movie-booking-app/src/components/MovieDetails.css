@@ -1,0 +1,27 @@
+.movie-details {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .movie-details-image {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .book-seat-button {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Medium size */
+    font-size: 16px; /* Medium font size */
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px auto; /* Center the button horizontally */
+    display: block; /* Ensure it's centered */
+  }
+  
+  .book-seat-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
